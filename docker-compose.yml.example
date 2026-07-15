@@ -1,6 +1,6 @@
 services:
   abiotic-server:
-    image: "ghcr.io/pleut/abiotic-factor-linux-docker:latest"
+    image: "thisismynameok/abiotic-factor-linux-docker:latest"
     restart: unless-stopped
     volumes:
       - "./gamefiles:/server"
@@ -16,6 +16,7 @@ services:
       - WorldSaveName=Cascade
 #     - AutoUpdate=true
 #     - AdditionalArgs=-SandboxIniPath=Config/WindowsServer/Server1Sandbox.ini
+      - DISCORD_WEBOOK_URL: <discord webhook url here>
     ports:
       - "0.0.0.0:7777:7777/udp"
       - "0.0.0.0:27015:27015/udp"

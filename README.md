@@ -2,6 +2,12 @@
 For operating a dedicated server in Docker in order to use it under Linux.
 The container uses Wine to run the server under Linux. 
 
+## NEW - Added Discord Webhook Integration for Session Code
+
+- Added discord webhook integration via container environment variable to spit out the invite code to any text channel you'd like.
+- Add the environment variable "DISCORD_WEBHOOK_URL" and give it the webhook URL from the discord text channel you want it posted in.
+- See [`docker-compose.yml.example`](docker-compose.yml.example) for an example.
+
 ## Setup
 1. Create a new empty directory in any location with enough storage space.
 2. Create a file named `docker-compose.yml` and copy the content of [`docker-compose.yml.example`](docker-compose.yml.example) into it.
